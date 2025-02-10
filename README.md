@@ -15,6 +15,8 @@ This tool is designed to migrate and transform data from an old database structu
 
 ## Usage
 
+Have the db you got from devs ready in a psql db called `vacatureland-old` or put the dump file in the root of the project, it's name should be `database.dump`.
+
 To run the migration:
 
 ```bash

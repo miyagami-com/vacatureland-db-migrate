@@ -34,7 +34,7 @@ const columnMapping: { [tableName: string]: { [oldColumn: string]: string } } =
 
 async function migrateData() {
   // check if vacatureland-old exists
-  // if not, create it from ./output.sql
+  // if not, create it from ./database.dump
 
   const client = new Client({
     user: "postgres",
