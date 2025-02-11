@@ -1,0 +1,310 @@
+[
+  {
+    "enum_name": "enum_application_status",
+    "enum_value": "in_progress",
+    "table_name": "user_applications",
+    "column_name": "status",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_application_status",
+    "enum_value": "rejected",
+    "table_name": "user_applications",
+    "column_name": "status",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_discount_type",
+    "enum_value": "volume",
+    "table_name": "discounts",
+    "column_name": "type",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_discount_type",
+    "enum_value": "code",
+    "table_name": "discounts",
+    "column_name": "type",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_education_level",
+    "enum_value": "PhD",
+    "table_name": "user_education",
+    "column_name": "education_level",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_education_level",
+    "enum_value": "WO",
+    "table_name": "user_education",
+    "column_name": "education_level",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_education_level",
+    "enum_value": "HBO",
+    "table_name": "user_education",
+    "column_name": "education_level",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_education_level",
+    "enum_value": "MBO",
+    "table_name": "user_education",
+    "column_name": "education_level",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_education_level",
+    "enum_value": "VWO",
+    "table_name": "user_education",
+    "column_name": "education_level",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_education_level",
+    "enum_value": "HAVO",
+    "table_name": "user_education",
+    "column_name": "education_level",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_education_level",
+    "enum_value": "LBO/VMBO",
+    "table_name": "user_education",
+    "column_name": "education_level",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_emp_count",
+    "enum_value": "1 - 10",
+    "table_name": "employers",
+    "column_name": "enum_employee_counts",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_emp_count",
+    "enum_value": "11 - 50",
+    "table_name": "employers",
+    "column_name": "enum_employee_counts",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_emp_count",
+    "enum_value": "51 - 200",
+    "table_name": "employers",
+    "column_name": "enum_employee_counts",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_emp_count",
+    "enum_value": "201 - 1000",
+    "table_name": "employers",
+    "column_name": "enum_employee_counts",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_emp_count",
+    "enum_value": "1K - 5K",
+    "table_name": "employers",
+    "column_name": "enum_employee_counts",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_emp_count",
+    "enum_value": "5K - 10K",
+    "table_name": "employers",
+    "column_name": "enum_employee_counts",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_emp_count",
+    "enum_value": "10K+",
+    "table_name": "employers",
+    "column_name": "enum_employee_counts",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_media_types",
+    "enum_value": "image",
+    "table_name": "media",
+    "column_name": "type",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_media_types",
+    "enum_value": "video",
+    "table_name": "media",
+    "column_name": "type",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_pricing_options",
+    "enum_value": "standard_post",
+    "table_name": "employers_purchases",
+    "column_name": "pricing_option",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_pricing_options",
+    "enum_value": "featured_post_for_30_days",
+    "table_name": "employers_purchases",
+    "column_name": "pricing_option",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_pricing_options",
+    "enum_value": "featured_post_for_60_days",
+    "table_name": "employers_purchases",
+    "column_name": "pricing_option",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_pricing_options",
+    "enum_value": "social_media_package",
+    "table_name": "employers_purchases",
+    "column_name": "pricing_option",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_pricing_options",
+    "enum_value": "employer_branding",
+    "table_name": "employers_purchases",
+    "column_name": "pricing_option",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_pricing_options",
+    "enum_value": "ongoing",
+    "table_name": "employers_purchases",
+    "column_name": "pricing_option",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_work_environment",
+    "enum_value": "hybrid",
+    "table_name": "job_posts",
+    "column_name": "work_environment",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_work_environment",
+    "enum_value": "on-site",
+    "table_name": "job_posts",
+    "column_name": "work_environment",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "enum_work_environment",
+    "enum_value": "remote",
+    "table_name": "job_posts",
+    "column_name": "work_environment",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "feed_direction",
+    "enum_value": "import",
+    "table_name": "xml_feeds_logs",
+    "column_name": "direction",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "feed_direction",
+    "enum_value": "export",
+    "table_name": "xml_feeds_logs",
+    "column_name": "direction",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "feed_provider",
+    "enum_value": "vacatureland",
+    "table_name": "xml_feeds_logs",
+    "column_name": "provider",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "feed_provider",
+    "enum_value": "jobrapido",
+    "table_name": "xml_feeds_logs",
+    "column_name": "provider",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "feed_provider",
+    "enum_value": "indeed",
+    "table_name": "xml_feeds_logs",
+    "column_name": "provider",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "feed_provider",
+    "enum_value": "vonq",
+    "table_name": "xml_feeds_logs",
+    "column_name": "provider",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "feed_provider",
+    "enum_value": "base",
+    "table_name": "xml_feeds_logs",
+    "column_name": "provider",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "feed_status",
+    "enum_value": "pending",
+    "table_name": "xml_feeds_logs",
+    "column_name": "status",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "feed_status",
+    "enum_value": "processing",
+    "table_name": "xml_feeds_logs",
+    "column_name": "status",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "feed_status",
+    "enum_value": "completed",
+    "table_name": "xml_feeds_logs",
+    "column_name": "status",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "feed_status",
+    "enum_value": "failed",
+    "table_name": "xml_feeds_logs",
+    "column_name": "status",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "subscription_status",
+    "enum_value": "active",
+    "table_name": "subscriptions",
+    "column_name": "status",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "subscription_status",
+    "enum_value": "canceled",
+    "table_name": "subscriptions",
+    "column_name": "status",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "subscription_status",
+    "enum_value": "suspended",
+    "table_name": "subscriptions",
+    "column_name": "status",
+    "data_type": "USER-DEFINED"
+  },
+  {
+    "enum_name": "subscription_status",
+    "enum_value": "pending",
+    "table_name": "subscriptions",
+    "column_name": "status",
+    "data_type": "USER-DEFINED"
+  }
+]

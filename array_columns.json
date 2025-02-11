@@ -1,0 +1,254 @@
+[
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_proc",
+    "column_name": "proargnames",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_proc",
+    "column_name": "proconfig",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_attribute",
+    "column_name": "attoptions",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_attribute",
+    "column_name": "attfdwoptions",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_class",
+    "column_name": "reloptions",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_event_trigger",
+    "column_name": "evttags",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_db_role_setting",
+    "column_name": "setconfig",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_tablespace",
+    "column_name": "spcoptions",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_extension",
+    "column_name": "extcondition",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_foreign_data_wrapper",
+    "column_name": "fdwoptions",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_foreign_server",
+    "column_name": "srvoptions",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_user_mapping",
+    "column_name": "umoptions",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_foreign_table",
+    "column_name": "ftoptions",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_roles",
+    "column_name": "rolconfig",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_shadow",
+    "column_name": "useconfig",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_user",
+    "column_name": "useconfig",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_stats_ext",
+    "column_name": "exprs",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_stats_ext",
+    "column_name": "most_common_vals",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_settings",
+    "column_name": "enumvals",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_hba_file_rules",
+    "column_name": "database",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_hba_file_rules",
+    "column_name": "user_name",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_hba_file_rules",
+    "column_name": "options",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_user_mappings",
+    "column_name": "umoptions",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "pg_catalog",
+    "table_name": "pg_subscription",
+    "column_name": "subpublications",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "information_schema",
+    "table_name": "_pg_foreign_table_columns",
+    "column_name": "attfdwoptions",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "information_schema",
+    "table_name": "_pg_foreign_data_wrappers",
+    "column_name": "fdwoptions",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "information_schema",
+    "table_name": "_pg_foreign_servers",
+    "column_name": "srvoptions",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "information_schema",
+    "table_name": "_pg_foreign_tables",
+    "column_name": "ftoptions",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "information_schema",
+    "table_name": "_pg_user_mappings",
+    "column_name": "umoptions",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "employers",
+    "column_name": "values",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "employers",
+    "column_name": "values_description",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "employers",
+    "column_name": "images",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "job_posts",
+    "column_name": "images",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "storage",
+    "table_name": "buckets",
+    "column_name": "allowed_mime_types",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "storage",
+    "table_name": "objects",
+    "column_name": "path_tokens",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  },
+  {
+    "table_schema": "supabase_migrations",
+    "table_name": "schema_migrations",
+    "column_name": "statements",
+    "data_type": "ARRAY",
+    "udt_name": "_text"
+  }
+]

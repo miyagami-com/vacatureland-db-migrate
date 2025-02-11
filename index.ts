@@ -2,6 +2,7 @@ import fs from "fs";
 import { Client } from "pg";
 import dotenv from "dotenv";
 import { execSync } from "child_process";
+import { main as runFinalSQL } from "./getFinalSQL";
 
 dotenv.config(); // Load environment variables from .env
 
@@ -133,4 +134,14 @@ runMigrations().then(() => {
   console.log("Dumping migrated data to 'cleaned_data.sql'...");
   runShellCommand("pg_dump vacatureland-old -f cleaned_data.sql");
   console.log("Database migration completed successfully.");
+
+  // Now run the final SQL processing script
+  runFinalSQL()
+    .then(() => {
+      console.log("getFinalSQL completed. Final database migration finished.");
+    })
+    .catch((err) => {
+      console.error("Error running getFinalSQL:", err);
+      process.exit(1);
+    });
 });

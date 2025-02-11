@@ -16,6 +16,9 @@ yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
 
+final_data_inserts.sql
+final_data.sql
+
 # Caches
 
 .cache
