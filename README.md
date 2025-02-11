@@ -23,12 +23,3 @@ To run the migration:
 bun run start
 ```
 
-The migration process will:
-
-1. Check if the 'vacatureland-old' database exists
-2. Create it from the dump file if it doesn't exist
-3. Create a new 'vacatureland-old-mapped' database
-4. Apply table and column mappings
-5. Generate two SQL dumps:
-   - `original_data.sql`: Original database dump
-   - `cleaned_data.sql`: Transformed database dump with new structure
