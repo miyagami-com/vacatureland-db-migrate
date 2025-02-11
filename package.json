@@ -1,9 +1,10 @@
 {
   "name": "vacatureland-db-migrate",
-  "module": "index.ts",
+  "module": "src/index.ts",
   "type": "module",
   "scripts": {
-    "start": "bun run index.ts"
+    "start": "bun run src/index.ts",
+    "update-types": "npx supabase gen types typescript --project-id ynawzkqnzigoqczvdjdr --schema public > ./types/supabase.db.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"
