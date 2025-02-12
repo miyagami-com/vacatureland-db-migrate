@@ -182,6 +182,29 @@ export async function main() {
   await client.connect();
   console.log("Connected to 'vacatureland-final'.");
 
+  // Get list of all existing tables
+  console.log("Checking for unused tables...");
+  const existingTablesRes = await client.query(`
+    SELECT tablename 
+    FROM pg_tables 
+    WHERE schemaname = 'public'
+  `);
+  const existingTables = new Set(
+    existingTablesRes.rows.map((row) => row.tablename)
+  );
+  const finalSchemaTables = new Set(Object.keys(tableDefs));
+
+  // Find and drop tables that aren't in the final schema
+  for (const tableName of existingTables) {
+    if (!finalSchemaTables.has(tableName)) {
+      console.log(`Dropping unused tasble: ${tableName}`);
+      await client.query(
+        `DROP TABLE IF EXISTS ${quoteIdentifier(tableName)} CASCADE`
+      );
+    }
+  }
+  console.log("Finished removing unused tables.");
+
   const enumMapping = await processUserDefinedEnums(client);
   const arrayMapping = getArrayColumnsMapping();
 
@@ -315,18 +338,68 @@ export async function main() {
   await client.end();
   console.log("Database schema adjustments completed.");
 
+  // Remove job posts with stepstone URLs
+  console.log("Removing job posts with stepstone URLs...");
+  const cleanupClient = new Client({
+    host: process.env.PGHOST || "localhost",
+    user: process.env.PGUSER || "postgres",
+    password: process.env.PGPASSWORD || "postgres",
+    port: Number(process.env.PGPORT) || 5432,
+    database: "vacatureland-final",
+  });
+
+  try {
+    await cleanupClient.connect();
+
+    // First, get the count and IDs of affected rows
+    const affectedJobsResult = await cleanupClient.query(`
+      SELECT id 
+      FROM job_posts 
+      WHERE apply_url ILIKE '%stepstone%'
+    `);
+
+    const affectedIds = affectedJobsResult.rows.map((row) => row.id);
+    console.log(`Found ${affectedIds.length} job posts with stepstone URLs`);
+
+    if (affectedIds.length > 0) {
+      // First delete from job_posts_tags
+      console.log("Deleting related records from job_posts_tags...");
+      const tagsResult = await cleanupClient.query(
+        `DELETE FROM job_posts_tags 
+         WHERE content_object_id = ANY($1::int[])`,
+        [affectedIds]
+      );
+      console.log(`Cleaned up related records in job_posts_tags`);
+
+      // Then delete from job_posts
+      console.log("Deleting job posts...");
+      const deleteResult = await cleanupClient.query(
+        `DELETE FROM job_posts 
+         WHERE id = ANY($1::int[])`,
+        [affectedIds]
+      );
+      console.log(
+        `Deleted ${deleteResult.rowCount} job posts with stepstone URLs`
+      );
+    }
+  } catch (error) {
+    console.error("Error removing stepstone job posts:", error);
+  } finally {
+    await cleanupClient.end();
+  }
+
   console.log("Dumping the final database schema to 'final_data.sql'...");
   runShellCommand("pg_dump vacatureland-final -f final_data.sql");
   console.log("Final database dump created as 'final_data.sql'.");
 
   console.log(
-    "Dumping the final data (COPY commands) to 'final_data_inserts.sql'..."
+    "Dumping the final data (INSERT statements) to 'final_data_inserts.sql'..."
   );
   runShellCommand(
-    "pg_dump --data-only vacatureland-final -f final_data_inserts.sql"
+    "pg_dump --data-only --column-inserts vacatureland-final -f final_data_inserts.sql"
   );
   console.log(
-    "Final data dump (using COPY) created as 'final_data_inserts.sql'."
+    "Final data dump (using INSERT) created as 'final_data_inserts.sql'."
   );
 }
 
