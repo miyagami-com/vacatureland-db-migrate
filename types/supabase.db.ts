@@ -150,6 +150,13 @@ export type Database = {
         }
         Relationships: [
           {
+            foreignKeyName: "accounts_employer_id_5ab95d60ee90c300_fk_accounts_customuser_id"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          },
+          {
             foreignKeyName: "employers_user_id_fkey"
             columns: ["user_id"]
             isOneToOne: false
@@ -290,6 +297,13 @@ export type Database = {
           user_id?: number
         }
         Relationships: [
+          {
+            foreignKeyName: "search_saved_user_id_7d9bf0280c1ca0d2_fk_accounts_customuser_id"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          },
           {
             foreignKeyName: "search_saved_user_id_7d9bf0280c1ca0d2_fk_users_id"
             columns: ["user_id"]
@@ -516,6 +530,13 @@ export type Database = {
             referencedColumns: ["id"]
           },
           {
+            foreignKeyName: "jobs_jobof_creator_id_ac3892ccb5c4dd6_fk_accounts_customuser_id"
+            columns: ["creator_id"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          },
+          {
             foreignKeyName: "jobs_jobof_creator_id_ac3892ccb5c4dd6_fk_users_id"
             columns: ["creator_id"]
             isOneToOne: false
@@ -560,6 +581,20 @@ export type Database = {
           },
           {
             foreignKeyName: "job_posts_tags_content_object_id_fkey"
+            columns: ["content_object_id"]
+            isOneToOne: false
+            referencedRelation: "job_posts_with_tags"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "jobs_tag_content_object_id_7a5ca13eef643bc6_fk_jobs_joboffer_id"
+            columns: ["content_object_id"]
+            isOneToOne: false
+            referencedRelation: "job_posts"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "jobs_tag_content_object_id_7a5ca13eef643bc6_fk_jobs_joboffer_id"
             columns: ["content_object_id"]
             isOneToOne: false
             referencedRelation: "job_posts_with_tags"
@@ -1739,6 +1774,13 @@ export type Database = {
         }
         Relationships: [
           {
+            foreignKeyName: "links_link_group_id_397732dbfa94cffe_fk_links_linkgroup_id"
+            columns: ["group_id"]
+            isOneToOne: false
+            referencedRelation: "whitelabel_groups"
+            referencedColumns: ["id"]
+          },
+          {
             foreignKeyName: "whitelabels_group_id_397732dbfa94cffe_fk_whitelabelsgroup_id"
             columns: ["group_id"]
             isOneToOne: false
@@ -1864,6 +1906,13 @@ export type Database = {
             referencedColumns: ["id"]
           },
           {
+            foreignKeyName: "jobs_jobof_creator_id_ac3892ccb5c4dd6_fk_accounts_customuser_id"
+            columns: ["creator_id"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          },
+          {
             foreignKeyName: "jobs_jobof_creator_id_ac3892ccb5c4dd6_fk_users_id"
             columns: ["creator_id"]
             isOneToOne: false
@@ -1946,6 +1995,10 @@ export type Database = {
         Args: {
           view_name: string
         }
+        Returns: undefined
+      }
+      reset_sequences: {
+        Args: Record<PropertyKey, never>
         Returns: undefined
       }
       search_job_posts: {

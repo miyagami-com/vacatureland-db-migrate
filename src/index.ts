@@ -7,6 +7,7 @@ import { main as runFinalSQL } from "./getFinalSQL";
 import migrateUsers from "../scripts/migrateUsers";
 import migrateMedia from "../scripts/migrateMedia";
 import generateJobPlaceLatLong from "../scripts/generateJobPlaceLatLong";
+import { resetIDSequeneces } from "../scripts/resetIDSequeneces";
 
 dotenv.config();
 
@@ -144,6 +145,7 @@ async function main() {
     message: "What would you like to do?",
     options: [
       { label: "Run SQL Migration", value: "sql" },
+      { label: "Reset ID Sequences", value: "reset-ids" },
       { label: "Migrate Users", value: "users" },
       { label: "Migrate Media", value: "media" },
       { label: "Generate Job Place Lat/Long", value: "job-places" },
@@ -158,6 +160,8 @@ async function main() {
   try {
     if (choice === "sql") {
       await runSQLMigration();
+    } else if (choice === "reset-ids") {
+      await resetIDSequeneces();
     } else {
       const scriptMap = {
         users: "Migrate Users",
